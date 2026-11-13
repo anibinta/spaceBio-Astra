@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spacebio-atlas.local/schemas/passage.schema.json",
+  "title": "Passage",
+  "description": "Niveau 2 : Passage source traçable rattaché à une publication.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "publicationId",
+    "section",
+    "text",
+    "position",
+    "isAuthorInterpretation",
+    "language",
+    "autoTranslated",
+    "isDemoData"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 2 },
+    "publicationId": { "type": "string" },
+    "section": {
+      "type": "string",
+      "enum": ["Results", "Discussion", "Conclusion", "Introduction"]
+    },
+    "text": { "type": "string", "minLength": 10 },
+    "textFr": { "type": ["string", "null"] },
+    "position": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["paragraphIndex", "charStart", "charEnd"],
+      "properties": {
+        "paragraphIndex": { "type": "integer", "minimum": 0 },
+        "charStart": { "type": "integer", "minimum": 0 },
+        "charEnd": { "type": "integer", "minimum": 1 },
+        "pageLabel": { "type": ["string", "null"] }
+      }
+    },
+    "isAuthorInterpretation": { "type": "boolean" },
+    "language": { "type": "string" },
+    "autoTranslated": { "type": "boolean" },
+    "isDemoData": { "type": "boolean" }
+  }
+}

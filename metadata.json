@@ -1,0 +1,6 @@
+{
+  "name": "SpaceBio Atlas",
+  "description": "Plateforme scientifique d'exploration des publications de biologie spatiale, matrice de preuves et Jumeau Mission Lune et Mars.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

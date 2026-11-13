@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "code": "en",
+    "nativeName": "English",
+    "autoTranslatedNotice": "Machine-translated content from original source."
+  },
+  "systems": {
+    "bone": "Skeletal / Bone",
+    "muscle": "Muscular System",
+    "immune": "Immune System",
+    "vision": "Vision & Ocular",
+    "cognition": "Cognition & Neuro",
+    "microbiome": "Gut Microbiome",
+    "cardiovascular": "Cardiovascular"
+  },
+  "conditions": {
+    "microgravity": "Orbital Microgravity",
+    "simulated_microgravity": "Simulated Microgravity",
+    "space_radiation": "Space Radiation",
+    "lunar_regolith": "Lunar Regolith",
+    "combined_stress": "Combined Stress",
+    "isolation_confinement": "Isolation & Confinement",
+    "hypergravity": "Hypergravity"
+  },
+  "durations": {
+    "short_lt_14d": "< 14 days",
+    "medium_14_90d": "14–90 days",
+    "long_90_365d": "90–365 days",
+    "deep_space_gt_365d": "> 365 days"
+  },
+  "statuses": {
+    "consensus": "Consensus",
+    "contradiction": "Contradiction",
+    "single_replication": "Single replication",
+    "empty": "Gap (empty)"
+  },
+  "directions": {
+    "increase": "Increase",
+    "decrease": "Decrease",
+    "no_effect": "No effect",
+    "inconclusive": "Inconclusive"
+  },
+  "evidenceLevels": {
+    "systematic_review": "Systematic review",
+    "flight_controlled": "Controlled spaceflight",
+    "flight_observational": "Observational spaceflight",
+    "ground_analog": "Ground analog",
+    "in_vitro": "In vitro"
+  },
+  "sections": {
+    "Results": "Results",
+    "Discussion": "Discussion",
+    "Conclusion": "Conclusion",
+    "Introduction": "Introduction"
+  },
+  "phases": {
+    "transit": "Transit",
+    "surface": "Surface",
+    "stay": "Long Stay",
+    "return": "Return"
+  },
+  "nav": {
+    "home": "Home",
+    "atlas": "Evidence Atlas",
+    "missionTwin": "Mission Twin",
+    "offline": "Offline",
+    "diagnostics": "Diagnostics",
+    "skipToContent": "Skip to main content"
+  },
+  "offline": {
+    "title": "Offline Knowledge & Low-Data Mode (PWA)",
+    "subtitle": "Synchronize the compressed local index into IndexedDB to search, explore the Atlas, and inspect Mission Twin without network connectivity.",
+    "syncNow": "Sync now",
+    "syncing": "Syncing…",
+    "simulateOffline": "Simulate offline mode",
+    "disableSimOffline": "Return to online mode",
+    "lowDataMode": "Low-data mode",
+    "downloadBundle": "Download index (.json.gz)",
+    "localSearchTitle": "Instant Local Search (< 200 ms)",
+    "localSearchPlaceholder": "Search an organism, passage, system, or keyword offline…",
+    "installApp": "Install PWA"
+  },
+  "diagnostics": {
+    "title": "Diagnostics, Performance & Regression Suite",
+    "subtitle": "Live runtime measurements, interactive 22 benchmark questions runner, sources, licenses, and scientific safeguards.",
+    "runBenchmark": "Run all 22 benchmark questions",
+    "runningBenchmark": "Running 22 questions…"
+  }
+}

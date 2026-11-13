@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spacebio-atlas.local/schemas/claim.schema.json",
+  "title": "Claim",
+  "description": "Niveau 3 : Affirmation élémentaire extraite d'un passage.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "passageId",
+    "publicationId",
+    "statement",
+    "organism",
+    "isModelOrganism",
+    "spaceCondition",
+    "exposureDurationDays",
+    "durationBucket",
+    "biologicalSystem",
+    "effectDirection",
+    "relationType",
+    "sampleSize",
+    "sampleUnit",
+    "evidenceLevel",
+    "confidenceScore",
+    "humanValidated",
+    "limitations",
+    "year",
+    "isDemoData"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "passageId": { "type": "string" },
+    "publicationId": { "type": "string" },
+    "statement": { "type": "string", "minLength": 5 },
+    "statementFr": { "type": ["string", "null"] },
+    "organism": { "type": "string" },
+    "isModelOrganism": { "type": "boolean" },
+    "spaceCondition": {
+      "type": "string",
+      "enum": [
+        "microgravity",
+        "simulated_microgravity",
+        "space_radiation",
+        "lunar_regolith",
+        "combined_stress",
+        "isolation_confinement",
+        "hypergravity"
+      ]
+    },
+    "exposureDurationDays": { "type": "number", "minimum": 0 },
+    "durationBucket": {
+      "type": "string",
+      "enum": ["short_lt_14d", "medium_14_90d", "long_90_365d", "deep_space_gt_365d"]
+    },
+    "biologicalSystem": {
+      "type": "string",
+      "enum": [
+        "bone",
+        "muscle",
+        "immune",
+        "vision",
+        "cognition",
+        "microbiome",
+        "cardiovascular"
+      ]
+    },
+    "effectDirection": {
+      "type": "string",
+      "enum": ["increase", "decrease", "no_effect", "inconclusive"]
+    },
+    "relationType": {
+      "type": "string",
+      "enum": ["correlation", "causation", "observational"]
+    },
+    "sampleSize": { "type": ["integer", "null"], "minimum": 1 },
+    "sampleUnit": { "type": "string" },
+    "evidenceLevel": {
+      "type": "string",
+      "enum": [
+        "systematic_review",
+        "flight_controlled",
+        "flight_observational",
+        "ground_analog",
+        "in_vitro"
+      ]
+    },
+    "confidenceScore": { "type": "number", "minimum": 0, "maximum": 1 },
+    "humanValidated": { "type": "boolean" },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "year": { "type": "integer" },
+    "isDemoData": { "type": "boolean" }
+  }
+}

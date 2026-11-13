@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "code": "fr",
+    "nativeName": "Français",
+    "autoTranslatedNotice": "Contenu traduit automatiquement depuis la source anglaise."
+  },
+  "systems": {
+    "bone": "Système osseux",
+    "muscle": "Système musculaire",
+    "immune": "Système immunitaire",
+    "vision": "Vision & oculaire",
+    "cognition": "Cognition & neuro",
+    "microbiome": "Microbiome intestinal",
+    "cardiovascular": "Cardiovasculaire"
+  },
+  "conditions": {
+    "microgravity": "Microgravité orbitale",
+    "simulated_microgravity": "Microgravité simulée",
+    "space_radiation": "Radiations spatiales",
+    "lunar_regolith": "Régolithe lunaire",
+    "combined_stress": "Stress combiné",
+    "isolation_confinement": "Isolement & confinement",
+    "hypergravity": "Hypergravité"
+  },
+  "durations": {
+    "short_lt_14d": "< 14 jours",
+    "medium_14_90d": "14–90 jours",
+    "long_90_365d": "90–365 jours",
+    "deep_space_gt_365d": "> 365 jours"
+  },
+  "statuses": {
+    "consensus": "Consensus",
+    "contradiction": "Contradiction",
+    "single_replication": "Réplication unique",
+    "empty": "Lacune (vide)"
+  },
+  "directions": {
+    "increase": "Hausse",
+    "decrease": "Baisse",
+    "no_effect": "Aucun effet",
+    "inconclusive": "Non concluant"
+  },
+  "evidenceLevels": {
+    "systematic_review": "Revue systématique",
+    "flight_controlled": "Vol spatial contrôlé",
+    "flight_observational": "Vol spatial observationnel",
+    "ground_analog": "Analogue terrestre",
+    "in_vitro": "In vitro"
+  },
+  "sections": {
+    "Results": "Résultats",
+    "Discussion": "Discussion",
+    "Conclusion": "Conclusion",
+    "Introduction": "Introduction"
+  },
+  "phases": {
+    "transit": "Transit",
+    "surface": "Surface",
+    "stay": "Séjour long",
+    "return": "Retour"
+  },
+  "nav": {
+    "home": "Accueil",
+    "atlas": "Atlas des preuves",
+    "missionTwin": "Jumeau Mission",
+    "offline": "Hors ligne",
+    "diagnostics": "Diagnostics",
+    "skipToContent": "Aller au contenu principal"
+  },
+  "offline": {
+    "title": "Savoir hors ligne & Mode léger (PWA)",
+    "subtitle": "Synchronisez l’index compressé local dans IndexedDB pour rechercher, explorer l’Atlas et consulter le Jumeau Mission sans connexion réseau.",
+    "syncNow": "Synchroniser maintenant",
+    "syncing": "Synchronisation…",
+    "simulateOffline": "Simuler mode hors ligne",
+    "disableSimOffline": "Revenir au mode en ligne",
+    "lowDataMode": "Mode faible consommation de données",
+    "downloadBundle": "Télécharger l’index (.json.gz)",
+    "localSearchTitle": "Recherche locale instantanée (< 200 ms)",
+    "localSearchPlaceholder": "Rechercher un organisme, passage, système ou mot-clé hors ligne…",
+    "installApp": "Installer l’application PWA"
+  },
+  "diagnostics": {
+    "title": "Diagnostics, Performance & Non-régression",
+    "subtitle": "Mesures réelles en temps d’exécution, exécution des 22 questions de référence, sources, licences et garde-fous scientifiques.",
+    "runBenchmark": "Exécuter les 22 questions de référence",
+    "runningBenchmark": "Exécution des 22 questions…"
+  }
+}

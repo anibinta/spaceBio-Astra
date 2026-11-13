@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spacebio-atlas.local/schemas/publication.schema.json",
+  "title": "Publication",
+  "description": "Niveau 1 : Publication scientifique indexée (NASA OSDR / démonstration).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "doi",
+    "pmid",
+    "title",
+    "authors",
+    "year",
+    "journal",
+    "keywords",
+    "fullTextStatus",
+    "externalLinks",
+    "license",
+    "language",
+    "autoTranslated",
+    "isDemoData"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^(DEMO-PUB-|PUB-)[A-Za-z0-9_-]+$" },
+    "doi": { "type": ["string", "null"] },
+    "pmid": { "type": ["string", "null"] },
+    "title": { "type": "string", "minLength": 3 },
+    "titleFr": { "type": ["string", "null"] },
+    "authors": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "year": { "type": "integer", "minimum": 1960, "maximum": 2035 },
+    "journal": { "type": "string" },
+    "keywords": { "type": "array", "items": { "type": "string" } },
+    "fullTextStatus": {
+      "type": "string",
+      "enum": ["full_text_available", "abstract_only", "metadata_only"]
+    },
+    "externalLinks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "url", "type"],
+        "properties": {
+          "label": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "type": {
+            "type": "string",
+            "enum": ["osdr", "pubmed", "doi", "pmc", "demo_placeholder"]
+          }
+        }
+      }
+    },
+    "license": { "type": "string" },
+    "language": { "type": "string" },
+    "autoTranslated": { "type": "boolean" },
+    "isDemoData": { "type": "boolean" }
+  }
+}

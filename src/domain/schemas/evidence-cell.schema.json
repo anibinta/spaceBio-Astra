@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spacebio-atlas.local/schemas/evidence-cell.schema.json",
+  "title": "EvidenceCell",
+  "description": "Niveau 4 : Cellule de preuve agrégeant les affirmations par système, condition et durée.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "biologicalSystem",
+    "spaceCondition",
+    "durationBucket",
+    "status",
+    "claimIds",
+    "passageIds",
+    "publicationIds",
+    "claimCount",
+    "publicationCount",
+    "totalSubjects",
+    "directionBreakdown",
+    "avgConfidence",
+    "hasHumanValidatedClaim",
+    "limitationsSummary",
+    "isDemoData"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "biologicalSystem": { "type": "string" },
+    "spaceCondition": { "type": "string" },
+    "durationBucket": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["consensus", "contradiction", "single_replication", "empty"]
+    },
+    "claimIds": { "type": "array", "items": { "type": "string" } },
+    "passageIds": { "type": "array", "items": { "type": "string" } },
+    "publicationIds": { "type": "array", "items": { "type": "string" } },
+    "claimCount": { "type": "integer", "minimum": 0 },
+    "publicationCount": { "type": "integer", "minimum": 0 },
+    "totalSubjects": { "type": "integer", "minimum": 0 },
+    "directionBreakdown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["increase", "decrease", "no_effect", "inconclusive"],
+      "properties": {
+        "increase": { "type": "integer", "minimum": 0 },
+        "decrease": { "type": "integer", "minimum": 0 },
+        "no_effect": { "type": "integer", "minimum": 0 },
+        "inconclusive": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "avgConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "hasHumanValidatedClaim": { "type": "boolean" },
+    "limitationsSummary": { "type": "array", "items": { "type": "string" } },
+    "isDemoData": { "type": "boolean" }
+  }
+}
